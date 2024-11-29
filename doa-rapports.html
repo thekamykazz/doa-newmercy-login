@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOA NewMercy</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://img.gta5-mods.com/q95/images/doa/267818-20210823154240_1.jpg'); /* URL de la carte du monde */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .login-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .login-container img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .login-container h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .login-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #000000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #000000;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #00bfff;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://static.wikia.nocookie.net/kafirp/images/2/25/Doa-logo.png/revision/latest?cb=20230828144741" alt="CIA Emblem"> <!-- Remplacez par l'URL de l'emblème CIA -->
+        <h2>Bienvenu</h2>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="ID de l'agent" required>
+            <input type="password" id="password" placeholder="Matricule" required>
+            <button type="submit">Connexion</button>
+        </form>
+        <a href="#">[thekamykazz]</a>
+        <div class="disclaimer">
+            DOA NewMercy 
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const validCredentials = [
+                {email: 'Bruler', password: '100'},
+                {email: 'Masse', password: '111'},
+                {email: 'Parento', password: '113'},
+                {email: 'Rufus', password: '102'},
+                {email: 'Paul', password: '112'},
+                {email: 'Broke', password: '101'},
+                {email: 'Gaetant', password: '103'},
+                {email: 'Lorenzo', password: '000'},
+                {email: 'Lilo', password: '000'},
+                {email: 'Jordan', password: '000'},
+                {email: 'Doug', password: '000'},
+                {email: 'Kyle', password: '000'},
+            ];
+
+            const isValid = validCredentials.some(cred => cred.email === email && cred.password === password);
+
+            if (isValid) {
+                window.location.href = 'https://www.twitch.tv/bigbone_qchs';
+            } else {
+                alert('Invalid Agent ID or Password');
+            }
+        });
+    </script>
+</body>
+</html>
